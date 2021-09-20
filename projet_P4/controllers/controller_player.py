@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 # coding: utf8
 
-from ..vues.vue import MenuVue
-from ..vues.vue_player import VuePlayer
+from ..vues.vue import ViewMenu
+from ..vues.vue_player import PlayerView
 
 
 class PlayersControl:
@@ -10,18 +10,7 @@ class PlayersControl:
     doctstring
     """
 
-    def __call__(self, *args, **kwargs):
-        return PlayersControl.create_players
-
-    def create_players(self, f_name, name):
-        """ Input for create player & return inputs """
-
-        VuePlayer().create_player_input()
-        MenuVue.display_end_message(f_name, name)
-
-
-
-
+    pass
 
 # def sorted_rank(self):
 # sorted_players = sorted(self.players, key=itemgetter("ranking"))

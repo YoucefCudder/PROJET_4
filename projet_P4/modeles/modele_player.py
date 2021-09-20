@@ -28,6 +28,3 @@ class Player:
             'ranking': self.ranking
         })
 
-
-
-
