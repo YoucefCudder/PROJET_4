@@ -38,3 +38,4 @@ if __name__ == "__main__":
     menu.add("auto", "premiere option du menu", lambda: None)
     menu.add("auto", "seconde option du menu", lambda: None)
     menu.add("auto", "troiseme option du menu", lambda: None)
+    menu.add("auto", "quatrième option du menu", lambda: None)
