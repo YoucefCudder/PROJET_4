@@ -1,8 +1,9 @@
-#!/usr/bin/env python3
-from ..vues.vue import ViewMenu
+#!/usr/bin/python3
+# coding: utf8
+from ..vues.vue import ViewMenu, UsefulView
 from ..modeles.model import Menu
 from projet_P4.vues.vue_tournament import TournamentView
-# from ..controllers.controller_player import PlayersControl
+from ..controllers.controller_tournament import TournamentControl
 from ..vues.vue_player import PlayerView
 from tinydb import TinyDB
 from operator import itemgetter
@@ -28,6 +29,7 @@ class MenuController:
     def __call__(self):
         # construction du menu
         self.menu.add("auto", "Créer un tournoi", NouveauTournoiController())
+        self.menu.add("auto", "Charger un tournoi", ChargerTournoiController())
         self.menu.add("auto", "Accéder aux différents rapports (joueurs/tournois)", RankingController())
         self.menu.add("auto", "Ajouter un joueur", AjouterJoueurController())
 
@@ -39,11 +41,17 @@ class MenuController:
 
 
 class NouveauTournoiController:
+    """
+    """
+
     def __call__(self):
         TournamentView().create_tournament()
-        """ ****CREER LA POSSIBILITE DE CHOISIR SES JOUEURS *****"""
+        return MenuController()
 
 
+class ChargerTournoiController:
+    def __call__(self):
+        TournamentControl().load_tournament()
         return MenuController()
 
 
@@ -51,7 +59,7 @@ class RankingController:
 
     def __init__(self):
         self.VuePlayer = PlayerView()
-        self.vue = ViewMenu(self)
+        self.vue = UsefulView()
         self.tournament = TournamentView()
 
     def __call__(self):
@@ -77,6 +85,8 @@ class RankingController:
                     self.VuePlayer.show_player(player)
             elif choose_option == 2:
                 list_players = sorted(players, key=itemgetter('ranking'))
+                # à faire : trier les string de numero
+
                 for player in list_players:
                     self.VuePlayer.show_player(player)
             elif choose_option == 3:
