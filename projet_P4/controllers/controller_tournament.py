@@ -55,6 +55,7 @@ class TournamentControl:
                         (list_of_players[3], list_of_players[7]),
                     ]
                 }
+                # INSTANCE DE CLASSE ROUND
                 TournamentView.display_pairings(new_round, list_of_players)
                 Tournaments.update_tournament(new_round, int(user_input), 1)
             elif choose_option == 2:
@@ -62,6 +63,7 @@ class TournamentControl:
             # DONNER DES RESULTATS INPUT SCORE
             # placer ici les input de score
              # date de fin
+
 
 
 
