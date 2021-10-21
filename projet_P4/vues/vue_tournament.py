@@ -3,7 +3,9 @@
 from datetime import datetime
 from ..controllers.controller_player import PlayersControl
 from ..modeles.modele_tournament import Tournaments
+from ..modeles.modele_round import Round
 from ..vues.vue import UsefulView
+
 
 
 class TournamentView:
@@ -48,20 +50,20 @@ class TournamentView:
         print("3 - Retour au menu principal")
 
     @staticmethod
-    def display_pairings(new_round, list_of_players):
-        print(f'Nom du round:  {new_round["name"]}\n\n')
-        print(f'Date de début: {new_round["start"]}\n')
-        print(f'Date de fin:   {new_round["end"]}\n')
+    def display_pairings(Round, list_of_players):
+        print(f'Nom du round:  {Round.round_info()["name"]}\n\n')
+        print(f'Date de début: {Round.round_info()["start"]}\n')
+        # print(f'Date de fin:   {new_round["end"]}\n')
         #
         # i = f'{new_round["matches"][0][0]}, {new_round["matches"][0][0]}'
         print()
-        for match, match_1 in new_round['matches']:
-            print(f'{match["name"]}  {match["f_name"]}    {match["ranking"]}  VS   '
-                  f'{match_1["name"]}  {match_1["f_name"]}   {match_1["ranking"]}')
-            print(match['name'], match['ranking'], match_1['name'], match_1['ranking'])
+        for match, match_1 in Round.pairing_for_round()['matches']:
+            print(f' Nom : {match["name"]},   Prénom : {match["f_name"]} |   Classement :  {match["ranking"]}  VS   '
+                  f' Nom : {match_1["name"]}, Prénom : {match_1["f_name"]} | Classement :   {match_1["ranking"]}')
+            #print(match['name'], match['ranking'], match_1['name'], match_1['ranking'])
         # for i in match, match_1:
-            score_1 = input(f'le score de {match["name"]}:  ')
-            score_2 = input(f'le score de {match_1["name"]}: ')
+            # score_1 = input(f'le score de {match["name"]}:  ')
+            # score_2 = input(f'le score de {match_1["name"]}: ')
 
     # print(f'les matchs du round: ', match)
     # for score in match:
