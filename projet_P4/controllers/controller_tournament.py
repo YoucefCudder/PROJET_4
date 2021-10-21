@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 # coding: utf8
 from ..modeles.modele_tournament import Tournaments
+from  ..modeles.modele_round import Round
 from ..vues.vue_tournament import TournamentView
 from ..vues.vue import ViewMenu, UsefulView
 from ..vues.vue_player import PlayerView
@@ -28,7 +29,7 @@ class TournamentControl:
         self.vue.input_prompt()
         user_input = input()
         tournament = tournaments[id_list.index(int(user_input))]
-        print(tournament)
+        #  print(tournament)
         condition = True
         while condition:
             TournamentView.menu_tournament()
@@ -56,8 +57,15 @@ class TournamentControl:
                     ]
                 }
                 # INSTANCE DE CLASSE ROUND
+                round_1 = Round("round_1")
+                round_1.pairing_for_round(list_of_players[0], list_of_players[4])
+                round_1.pairing_for_round(list_of_players[1], list_of_players[5])
+                round_1.pairing_for_round(list_of_players[2], list_of_players[6])
+                round_1.pairing_for_round(list_of_players[3], list_of_players[7])
+                print(round_1.round_info())
+
                 TournamentView.display_pairings(new_round, list_of_players)
-                Tournaments.update_tournament(new_round, int(user_input), 1)
+                # Tournaments.update_tournament(new_round, int(user_input), 1)
             elif choose_option == 2:
                 pass
             # DONNER DES RESULTATS INPUT SCORE
