@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # coding: utf8
 from ..modeles.modele_tournament import Tournaments
-from  ..modeles.modele_round import Round
+from ..modeles.modele_round import Round
 from ..vues.vue_tournament import TournamentView
 from ..vues.vue import ViewMenu, UsefulView
 from ..vues.vue_player import PlayerView
@@ -29,23 +29,40 @@ class TournamentControl:
         self.vue.input_prompt()
         user_input = input()
         tournament = tournaments[id_list.index(int(user_input))]
-        #  print(tournament)
         condition = True
         while condition:
             TournamentView.menu_tournament()
             choose_option = self.vue.saisie_chiffre(' Choisissez une option :  ')
-            if choose_option == 1:
-                pass
-                # fonction générer un round : PAIRE DES JOUEURS
-                # print(tournament['players'][0])
-                # print(f'{tournament["players"][0]}', tournament['players'][5])
-                # making_round = len(tournament['players']) // 2
-                # print(tournament[:making_round])
-                # input_score = input()
-
                 # trier les joueurs en fonction du ranking le plus haut
-                list_of_players = sorted(tournament['players'], key=itemgetter('ranking'), reverse=True)
-                new_round = {
+            list_of_players = sorted(tournament['players'], key=itemgetter('ranking'), reverse=True)
+
+            if choose_option == 1:
+
+                # fonction générer un round : PAIRE DES JOUEURS
+                # INSTANCE DE CLASSE ROUND
+
+                TournamentView.display_pairings(list_of_players[0], list_of_players[4])
+                TournamentView.display_pairings(list_of_players[1], list_of_players[5])
+                TournamentView.display_pairings(list_of_players[2], list_of_players[6])
+                TournamentView.display_pairings(list_of_players[3], list_of_players[7])
+
+                # Enregistrer le ROUND dans le TOURNOI dans TINYDB
+                # Tournaments.update_tournament()
+
+            elif choose_option == 2:
+            # DONNER DES RESULTATS INPUT SCORE
+            # placer ici les input de score
+            # date de fin
+                TournamentView.input_score(list_of_players[0], list_of_players[4])
+                TournamentView.input_score(list_of_players[1], list_of_players[5])
+                TournamentView.input_score(list_of_players[2], list_of_players[6])
+                TournamentView.input_score(list_of_players[3], list_of_players[7])
+
+                # enregistrer le score des JOUEURS dans le TOURNOI dans TINYDB
+
+            elif choose_option == 3:
+                condition = False
+                """new_round = {
                     'name': 'Round 1',
                     'start': datetime.now().strftime('%d-%m-%y %H:%M:%S'),
                     'end': datetime.now().strftime('%d-%m-%y %H:%M:%S'),
@@ -55,56 +72,4 @@ class TournamentControl:
                         (list_of_players[2], list_of_players[6]),
                         (list_of_players[3], list_of_players[7]),
                     ]
-                }
-                # INSTANCE DE CLASSE ROUND
-                round_1 = Round("round_1")
-                round_1.pairing_for_round(list_of_players[0], list_of_players[4])
-                round_1.pairing_for_round(list_of_players[1], list_of_players[5])
-                round_1.pairing_for_round(list_of_players[2], list_of_players[6])
-                round_1.pairing_for_round(list_of_players[3], list_of_players[7])
-                print(round_1.round_info())
-
-                TournamentView.display_pairings(new_round, list_of_players)
-                # Tournaments.update_tournament(new_round, int(user_input), 1)
-            elif choose_option == 2:
-                pass
-            # DONNER DES RESULTATS INPUT SCORE
-            # placer ici les input de score
-             # date de fin
-
-
-
-
-            elif choose_option == 3:
-                condition = False
-
-    # TournamentView.menu_tournament(tournaments=load_tournament(1), players=8)
-
-
-"""  def report_menu(self):
-
-        condition = True
-        db = TinyDB('db_player.json')
-        db_tournament = TinyDB('db_tournaments.json')
-
-        while condition:
-            all_players_table = db.table('players')
-            players = all_players_table.all()
-            all_tournaments = db_tournament.table("tournaments")
-            tournaments = all_tournaments.all()
-            self.vue.show_report_menu()
-            choose_option = self.vue.saisie_chiffre(' Choisissez une option :  ')
-            if choose_option == 1:
-                list_players = sorted(players, key=itemgetter('name'))
-                for player in list_players:
-                    self.VuePlayer.show_player(player)
-            elif choose_option == 2:
-                list_players = sorted(players, key=itemgetter('ranking'))
-
-                for player in list_players:
-                    self.VuePlayer.show_player(player)
-            elif choose_option == 3:
-                for tournament in tournaments:
-                    self.tournament.show_tournament(tournament)
-            elif choose_option == 4:
-                condition = False"""
+                }"""
