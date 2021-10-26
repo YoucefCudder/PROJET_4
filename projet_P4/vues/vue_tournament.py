@@ -7,7 +7,6 @@ from ..modeles.modele_round import Round
 from ..vues.vue import UsefulView
 
 
-
 class TournamentView:
 
     @staticmethod
@@ -50,25 +49,21 @@ class TournamentView:
         print("3 - Retour au menu principal")
 
     @staticmethod
-    def display_pairings(Round, list_of_players):
-        print(f'Nom du round:  {Round.round_info()["name"]}\n\n')
-        print(f'Date de début: {Round.round_info()["start"]}\n')
+    def display_pairings(player_1, player_2):
+        # print(f'Nom du round:  {Round("Round 1")}\n\n')
+        print(f"Date de début: {datetime.now().strftime('%d-%m-%y %H:%M:%S')}\n")
         # print(f'Date de fin:   {new_round["end"]}\n')
         #
         # i = f'{new_round["matches"][0][0]}, {new_round["matches"][0][0]}'
         print()
-        for match, match_1 in Round.pairing_for_round()['matches']:
-            print(f' Nom : {match["name"]},   Prénom : {match["f_name"]} |   Classement :  {match["ranking"]}  VS   '
-                  f' Nom : {match_1["name"]}, Prénom : {match_1["f_name"]} | Classement :   {match_1["ranking"]}')
-            #print(match['name'], match['ranking'], match_1['name'], match_1['ranking'])
+
+        print(f' Nom : {player_1["name"]},   Prénom : {player_1["f_name"]} |   Classement :  {player_1["ranking"]}  VS'
+              f' Nom : {player_2["name"]}, Prénom : {player_2["f_name"]} | Classement :   {player_2["ranking"]}')
+        # print(match['name'], match['ranking'], match_1['name'], match_1['ranking'])
         # for i in match, match_1:
-            # score_1 = input(f'le score de {match["name"]}:  ')
-            # score_2 = input(f'le score de {match_1["name"]}: ')
 
     # print(f'les matchs du round: ', match)
     # for score in match:
-    #
-
     # print({list_of_players[0]['name']}, {list_of_players[0]['ranking']}, {list_of_players[3]['name']},
     # {list_of_players[3]['ranking']})
     # print({list_of_players[1]['name']}, {list_of_players[1]['ranking']}, {list_of_players[5]['name']},
@@ -78,5 +73,11 @@ class TournamentView:
     # print({list_of_players[3]['name']}, {list_of_players[3]['ranking']}, {list_of_players[7]['name']},
     # {list_of_players[7]['ranking']})
 
-    def input_score(self, message):
-        UsefulView.saisie_chiffre(message)
+    @staticmethod
+    def input_score (player_1, player_2):
+        print(f' Nom : {player_1["name"]},   Prénom : {player_1["f_name"]} |   Classement :  {player_1["ranking"]}  VS'
+              f' Nom : {player_2["name"]}, Prénom : {player_2["f_name"]} | Classement :   {player_2["ranking"]}')
+        score_1 = input(f'le score de {player_1["name"]}:  ')
+        score_2 = input(f'le score de {player_2["name"]}: ')
+        # end_time_round = Round('')
+        # end_time_round.end_time(datetime.now().strftime('%d-%m-%y %H:%M:%S'))

@@ -21,12 +21,10 @@ class Round:
     def pairing_for_round(self, player_1, player_2):
         """Set match paring as tuple"""
         match = (
-            f"{player_1['f_name']}, {player_1['name']}",
-            player_1["ranking"],
-            player_1["score"],
-            f"{player_2['f_name']}, {player_2['name']}",
-            player_2["ranking"],
-            player_2["score"]
+            f" PRENOM : {player_1['f_name']}, NOM : {player_1['name']}, CLASSEMENT : {player_1['ranking']},"
+            f" SCORE :  {player_1['score']}",
+            f" VS PRENOM {player_2['f_name']},NOM {player_2['name']}, CLASSEMENT : {player_2['ranking']},"
+            f" SCORE : {player_2['score']}"
         )
         self.matches.append(match)
 
