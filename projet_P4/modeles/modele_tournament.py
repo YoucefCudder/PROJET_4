@@ -48,11 +48,11 @@ class Tournaments:
             tournaments.append(item)
         return tournaments
 
-    @staticmethod
-    def update_tournament(new_round, tournament_id, current_round):
+
+    def update_tournament(self,  tournament_id):
         # trouver une fonction pour mettre a jour le tournoi avec TinyDB
         tournament_db = TinyDB('db_tournaments.json')
-        tournament_db.update({'list_of_rounds': new_round}, doc_ids=[tournament_id])
-        tournament_db.update({'current_round': current_round}, doc_ids=[tournament_id])
+        tournament_db.update({'list_of_rounds': self.list_of_rounds}, doc_ids=[tournament_id])
+        tournament_db.update({'current_round': self.current_round}, doc_ids=[tournament_id])
 
 
