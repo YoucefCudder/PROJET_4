@@ -33,7 +33,7 @@ class TournamentControl:
         while condition:
             TournamentView.menu_tournament()
             choose_option = self.vue.saisie_chiffre(' Choisissez une option :  ')
-                # trier les joueurs en fonction du ranking le plus haut
+            # trier les joueurs en fonction du ranking le plus haut
             list_of_players = sorted(tournament['players'], key=itemgetter('ranking'), reverse=True)
 
             if choose_option == 1:
@@ -50,9 +50,9 @@ class TournamentControl:
                 # Tournaments.update_tournament()
 
             elif choose_option == 2:
-            # DONNER DES RESULTATS INPUT SCORE
-            # placer ici les input de score
-            # date de fin
+                # DONNER DES RESULTATS INPUT SCORE
+                # placer ici les input de score
+                # date de fin
                 TournamentView.input_score(list_of_players[0], list_of_players[4])
                 TournamentView.input_score(list_of_players[1], list_of_players[5])
                 TournamentView.input_score(list_of_players[2], list_of_players[6])
@@ -61,6 +61,26 @@ class TournamentControl:
                 # enregistrer le score des JOUEURS dans le TOURNOI dans TINYDB
 
             elif choose_option == 3:
+                TournamentView.reports_intra_tournament()
+                option_chosen = self.vue.saisie_chiffre(' Choisissez une option :  ')
+                if option_chosen == 1:
+                    list_of_sorted_players = sorted(tournament['players'], key=itemgetter('name'))
+                    TournamentView.show_player(list_of_sorted_players, tournament)
+                elif option_chosen == 2:
+                    list_of_ranked_players = sorted(tournament['players'], key=itemgetter('score'), reverse=True)
+                    TournamentView.show_player_ranked(list_of_ranked_players, tournament)
+                elif option_chosen == 3:
+                    TournamentView.show_rounds(tournament)
+                elif option_chosen == 3:
+                    pass
+                elif option_chosen == 3:
+                    condition = False
+
+
+
+
+            elif choose_option == 4:
+
                 condition = False
                 """new_round = {
                     'name': 'Round 1',
