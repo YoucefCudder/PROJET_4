@@ -9,6 +9,7 @@ class PlayersControl:
     """
     doctstring
     """
+
     def __init__(self):
         self.view_player = PlayerView()
         self.menu = ViewMenu(menu=None)

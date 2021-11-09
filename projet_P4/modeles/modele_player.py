@@ -16,25 +16,27 @@ class Player:
         self.ranking = ranking
 
     def __repr__(self):
-        return f'{self.name}, {self.f_name}, {self.ranking}'
+        return f"{self.name}, {self.f_name}, {self.ranking}"
 
     def create_players(self):
-        db = TinyDB('db_player.json')
-        players_table = db.table('players')
-        players_table.insert({
-            'name': self.name,
-            'f_name': self.f_name,
-            'gender': self.gender,
-            'birthdate': self.birthdate,
-            'age': self.age,
-            'score': self.score,
-            'ranking': self.ranking
-        })
+        db = TinyDB("db_player.json")
+        players_table = db.table("players")
+        players_table.insert(
+            {
+                "name": self.name,
+                "f_name": self.f_name,
+                "gender": self.gender,
+                "birthdate": self.birthdate,
+                "age": self.age,
+                "score": self.score,
+                "ranking": self.ranking,
+            }
+        )
 
     @staticmethod
     def deserialize_players():
-        players_db = TinyDB('db_player.json')
-        players_table = players_db.table('players')
+        players_db = TinyDB("db_player.json")
+        players_table = players_db.table("players")
 
         players = []
         for item in players_table.all():
@@ -43,7 +45,7 @@ class Player:
         return players
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     Player.deserialize_players()
 
 
