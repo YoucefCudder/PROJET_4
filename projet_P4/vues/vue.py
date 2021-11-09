@@ -72,8 +72,8 @@ class UsefulView:
               "[Y] pour oui /  [N] pour non ")
         print(TournamentView.create_tournament())
         user_input = input()
-        if user_input == "Y":
+        if user_input == "Y" or "y":
             pass
-        elif user_input == "N":
+        elif user_input == "N" or "n":
             return TournamentView.create_tournament()
 
