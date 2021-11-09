@@ -10,7 +10,6 @@ from operator import itemgetter
 
 
 class Controller:
-
     def __init__(self):
         self.controller = None
 
@@ -21,7 +20,6 @@ class Controller:
 
 
 class MenuController:
-
     def __init__(self):
         self.menu = Menu()
         self.vue = ViewMenu(self.menu)
@@ -30,7 +28,11 @@ class MenuController:
         # construction du menu
         self.menu.add("auto", "Créer un tournoi", NouveauTournoiController())
         self.menu.add("auto", "Charger un tournoi", ChargerTournoiController())
-        self.menu.add("auto", "Accéder aux différents rapports (joueurs/tournois)", RankingController())
+        self.menu.add(
+            "auto",
+            "Accéder aux différents rapports (joueurs/tournois)",
+            RankingController(),
+        )
         self.menu.add("auto", "Ajouter un joueur", AjouterJoueurController())
 
         # demande d'affichage du menu et collecte de réponse
@@ -41,8 +43,7 @@ class MenuController:
 
 
 class NouveauTournoiController:
-    """
-    """
+    """ """
 
     def __call__(self):
         TournamentView().create_tournament()
@@ -56,7 +57,6 @@ class ChargerTournoiController:
 
 
 class RankingController:
-
     def __init__(self):
         self.VuePlayer = PlayerView()
         self.vue = UsefulView()
@@ -69,22 +69,22 @@ class RankingController:
     def report_menu(self):
 
         condition = True
-        db = TinyDB('db_player.json')
-        db_tournament = TinyDB('db_tournaments.json')
+        db = TinyDB("db_player.json")
+        db_tournament = TinyDB("db_tournaments.json")
 
         while condition:
-            all_players_table = db.table('players')
+            all_players_table = db.table("players")
             players = all_players_table.all()
             all_tournaments = db_tournament.table("tournaments")
             tournaments = all_tournaments.all()
             self.vue.show_report_menu()
-            choose_option = self.vue.saisie_chiffre(' Choisissez une option :  ')
+            choose_option = self.vue.input_int(" Choisissez une option :  ")
             if choose_option == 1:
-                list_players = sorted(players, key=itemgetter('name'))
+                list_players = sorted(players, key=itemgetter("name"))
                 for player in list_players:
                     self.VuePlayer.show_player(player)
             elif choose_option == 2:
-                list_players = sorted(players, key=itemgetter('ranking'))
+                list_players = sorted(players, key=itemgetter("ranking"))
                 # à faire : trier les string de numero
 
                 for player in list_players:
@@ -97,7 +97,6 @@ class RankingController:
 
 
 class AjouterJoueurController:
-
     def __call__(self):
         PlayerView().create_player_input()
 
