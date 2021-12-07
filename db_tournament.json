@@ -1,0 +1,908 @@
+{
+    "Tournament": {
+        "1": {
+            "id": 1,
+            "name": "Tournoi test 1",
+            "description": "tournoi IDF",
+            "place": "Paris",
+            "start": "01/01/2022",
+            "end": "03/01/2022",
+            "timing": "Bullet",
+            "rounds": 4,
+            "rounds_list": [
+                {
+                    "name": "Round 1",
+                    "start_time": "24-11-21 13:38:34",
+                    "end_time": "24-11-21 13:47:32",
+                    "matches": [
+                        [
+                            [
+                                {
+                                    "id": 8,
+                                    "f_name": "H_joueur",
+                                    "name": "H_joueur",
+                                    "gender": "F",
+                                    "birthdate": "01/01/1994",
+                                    "age": 27,
+                                    "ranking": 8,
+                                    "score": 0
+                                },
+                                1
+                            ],
+                            [
+                                {
+                                    "id": 4,
+                                    "f_name": "D_joueur",
+                                    "name": "D_joueur",
+                                    "gender": "F",
+                                    "birthdate": "01/01/1994",
+                                    "age": 27,
+                                    "ranking": 4,
+                                    "score": 0
+                                },
+                                0
+                            ]
+                        ],
+                        [
+                            [
+                                {
+                                    "id": 7,
+                                    "f_name": "G_joueur",
+                                    "name": "G_joueur",
+                                    "gender": "M",
+                                    "birthdate": "01/01/1994",
+                                    "age": 27,
+                                    "ranking": 7,
+                                    "score": 0
+                                },
+                                0
+                            ],
+                            [
+                                {
+                                    "id": 3,
+                                    "f_name": "C_joueur",
+                                    "name": "C_joueur",
+                                    "gender": "M",
+                                    "birthdate": "01/01/1994",
+                                    "age": 27,
+                                    "ranking": 3,
+                                    "score": 0
+                                },
+                                1
+                            ]
+                        ],
+                        [
+                            [
+                                {
+                                    "id": 6,
+                                    "f_name": "F_joueur",
+                                    "name": "F_joueur",
+                                    "gender": "F",
+                                    "birthdate": "01/01/1994",
+                                    "age": 27,
+                                    "ranking": 6,
+                                    "score": 0
+                                },
+                                1
+                            ],
+                            [
+                                {
+                                    "id": 2,
+                                    "f_name": "B_joueur",
+                                    "name": "B_joueur",
+                                    "gender": "F",
+                                    "birthdate": "01/01/1994",
+                                    "age": 27,
+                                    "ranking": 2,
+                                    "score": 0
+                                },
+                                0
+                            ]
+                        ],
+                        [
+                            [
+                                {
+                                    "id": 5,
+                                    "f_name": "E_joueur",
+                                    "name": "E_joueur",
+                                    "gender": "M",
+                                    "birthdate": "01/01/1994",
+                                    "age": 27,
+                                    "ranking": 5,
+                                    "score": 0
+                                },
+                                0
+                            ],
+                            [
+                                {
+                                    "id": 1,
+                                    "f_name": "A_joueur",
+                                    "name": "A_joueur",
+                                    "gender": "M",
+                                    "birthdate": "01/01/1994",
+                                    "age": 27,
+                                    "ranking": 1,
+                                    "score": 0
+                                },
+                                1
+                            ]
+                        ]
+                    ]
+                },
+                {
+                    "name": "Round 2",
+                    "start_time": "24-11-21 13:47:53",
+                    "end_time": "30-11-21 19:28:51",
+                    "matches": [
+                        [
+                            [
+                                {
+                                    "id": 8,
+                                    "f_name": "H_joueur",
+                                    "name": "H_joueur",
+                                    "gender": "F",
+                                    "birthdate": "01/01/1994",
+                                    "age": 27,
+                                    "ranking": 8,
+                                    "score": 1
+                                },
+                                1
+                            ],
+                            [
+                                {
+                                    "id": 6,
+                                    "f_name": "F_joueur",
+                                    "name": "F_joueur",
+                                    "gender": "F",
+                                    "birthdate": "01/01/1994",
+                                    "age": 27,
+                                    "ranking": 6,
+                                    "score": 1
+                                },
+                                0
+                            ]
+                        ],
+                        [
+                            [
+                                {
+                                    "id": 3,
+                                    "f_name": "C_joueur",
+                                    "name": "C_joueur",
+                                    "gender": "M",
+                                    "birthdate": "01/01/1994",
+                                    "age": 27,
+                                    "ranking": 3,
+                                    "score": 1
+                                },
+                                1
+                            ],
+                            [
+                                {
+                                    "id": 1,
+                                    "f_name": "A_joueur",
+                                    "name": "A_joueur",
+                                    "gender": "M",
+                                    "birthdate": "01/01/1994",
+                                    "age": 27,
+                                    "ranking": 1,
+                                    "score": 1
+                                },
+                                0
+                            ]
+                        ],
+                        [
+                            [
+                                {
+                                    "id": 7,
+                                    "f_name": "G_joueur",
+                                    "name": "G_joueur",
+                                    "gender": "M",
+                                    "birthdate": "01/01/1994",
+                                    "age": 27,
+                                    "ranking": 7,
+                                    "score": 0
+                                },
+                                0
+                            ],
+                            [
+                                {
+                                    "id": 5,
+                                    "f_name": "E_joueur",
+                                    "name": "E_joueur",
+                                    "gender": "M",
+                                    "birthdate": "01/01/1994",
+                                    "age": 27,
+                                    "ranking": 5,
+                                    "score": 0
+                                },
+                                1
+                            ]
+                        ],
+                        [
+                            [
+                                {
+                                    "id": 4,
+                                    "f_name": "D_joueur",
+                                    "name": "D_joueur",
+                                    "gender": "F",
+                                    "birthdate": "01/01/1994",
+                                    "age": 27,
+                                    "ranking": 4,
+                                    "score": 0
+                                },
+                                1
+                            ],
+                            [
+                                {
+                                    "id": 2,
+                                    "f_name": "B_joueur",
+                                    "name": "B_joueur",
+                                    "gender": "F",
+                                    "birthdate": "01/01/1994",
+                                    "age": 27,
+                                    "ranking": 2,
+                                    "score": 0
+                                },
+                                0
+                            ]
+                        ]
+                    ]
+                }
+            ],
+            "current_round": 2,
+            "players": [
+                {
+                    "id": 1,
+                    "f_name": "A_joueur",
+                    "name": "A_joueur",
+                    "gender": "M",
+                    "birthdate": "01/01/1994",
+                    "age": 27,
+                    "ranking": 1,
+                    "score": 1
+                },
+                {
+                    "id": 2,
+                    "f_name": "B_joueur",
+                    "name": "B_joueur",
+                    "gender": "F",
+                    "birthdate": "01/01/1994",
+                    "age": 27,
+                    "ranking": 2,
+                    "score": 0
+                },
+                {
+                    "id": 3,
+                    "f_name": "C_joueur",
+                    "name": "C_joueur",
+                    "gender": "M",
+                    "birthdate": "01/01/1994",
+                    "age": 27,
+                    "ranking": 3,
+                    "score": 2
+                },
+                {
+                    "id": 4,
+                    "f_name": "D_joueur",
+                    "name": "D_joueur",
+                    "gender": "F",
+                    "birthdate": "01/01/1994",
+                    "age": 27,
+                    "ranking": 4,
+                    "score": 1
+                },
+                {
+                    "id": 5,
+                    "f_name": "E_joueur",
+                    "name": "E_joueur",
+                    "gender": "M",
+                    "birthdate": "01/01/1994",
+                    "age": 27,
+                    "ranking": 5,
+                    "score": 1
+                },
+                {
+                    "id": 6,
+                    "f_name": "F_joueur",
+                    "name": "F_joueur",
+                    "gender": "F",
+                    "birthdate": "01/01/1994",
+                    "age": 27,
+                    "ranking": 6,
+                    "score": 1
+                },
+                {
+                    "id": 7,
+                    "f_name": "G_joueur",
+                    "name": "G_joueur",
+                    "gender": "M",
+                    "birthdate": "01/01/1994",
+                    "age": 27,
+                    "ranking": 7,
+                    "score": 0
+                },
+                {
+                    "id": 8,
+                    "f_name": "H_joueur",
+                    "name": "H_joueur",
+                    "gender": "F",
+                    "birthdate": "01/01/1994",
+                    "age": 27,
+                    "ranking": 8,
+                    "score": 2
+                }
+            ]
+        },
+        "2": {
+            "id": 2,
+            "name": "Tournoi test 2 ",
+            "description": "tournoi de test visuel des rounds",
+            "place": "Paris",
+            "start": "24/11/2022",
+            "end": "25/11/2022",
+            "timing": "Bullet",
+            "rounds": 4,
+            "rounds_list": [
+                {
+                    "name": "Round 1",
+                    "start_time": "24-11-21 13:45:33",
+                    "end_time": "24-11-21 13:50:40",
+                    "matches": [
+                        [
+                            [
+                                {
+                                    "id": 17,
+                                    "f_name": "S_joueur",
+                                    "name": "S_joueur",
+                                    "gender": "M",
+                                    "birthdate": "01/01/1994",
+                                    "age": "27",
+                                    "ranking": 22,
+                                    "score": 0
+                                },
+                                1
+                            ],
+                            [
+                                {
+                                    "id": 10,
+                                    "f_name": "I_joueur",
+                                    "name": "I_joueur",
+                                    "gender": "M",
+                                    "birthdate": "01/01/1994",
+                                    "age": 27,
+                                    "ranking": 10,
+                                    "score": 0
+                                },
+                                0
+                            ]
+                        ],
+                        [
+                            [
+                                {
+                                    "id": 16,
+                                    "f_name": "R_joueur",
+                                    "name": "R_joueur",
+                                    "gender": "M",
+                                    "birthdate": "01/01/1994",
+                                    "age": "27",
+                                    "ranking": 17,
+                                    "score": 0
+                                },
+                                0
+                            ],
+                            [
+                                {
+                                    "id": 9,
+                                    "f_name": "J_joueur",
+                                    "name": "J_joueur",
+                                    "gender": "F",
+                                    "birthdate": "01/01/1994",
+                                    "age": 27,
+                                    "ranking": 9,
+                                    "score": 0
+                                },
+                                1
+                            ]
+                        ],
+                        [
+                            [
+                                {
+                                    "id": 15,
+                                    "f_name": "Q_joueur",
+                                    "name": "Q_joueur",
+                                    "gender": "M",
+                                    "birthdate": "01/01/1994",
+                                    "age": "27",
+                                    "ranking": 16,
+                                    "score": 0
+                                },
+                                1
+                            ],
+                            [
+                                {
+                                    "id": 8,
+                                    "f_name": "H_joueur",
+                                    "name": "H_joueur",
+                                    "gender": "F",
+                                    "birthdate": "01/01/1994",
+                                    "age": 27,
+                                    "ranking": 8,
+                                    "score": 0
+                                },
+                                0
+                            ]
+                        ],
+                        [
+                            [
+                                {
+                                    "id": 11,
+                                    "f_name": "Z_joueur",
+                                    "name": "Z_joueur",
+                                    "gender": "M",
+                                    "birthdate": "01/01/1998",
+                                    "age": "23",
+                                    "ranking": 11,
+                                    "score": 0
+                                },
+                                0
+                            ],
+                            [
+                                {
+                                    "id": 7,
+                                    "f_name": "G_joueur",
+                                    "name": "G_joueur",
+                                    "gender": "M",
+                                    "birthdate": "01/01/1994",
+                                    "age": 27,
+                                    "ranking": 7,
+                                    "score": 0
+                                },
+                                1
+                            ]
+                        ]
+                    ]
+                },
+                {
+                    "name": "Round 2",
+                    "start_time": "24-11-21 13:50:50",
+                    "end_time": "24-11-21 13:51:11",
+                    "matches": [
+                        [
+                            [
+                                {
+                                    "id": 17,
+                                    "f_name": "S_joueur",
+                                    "name": "S_joueur",
+                                    "gender": "M",
+                                    "birthdate": "01/01/1994",
+                                    "age": "27",
+                                    "ranking": 22,
+                                    "score": 4
+                                },
+                                1
+                            ],
+                            [
+                                {
+                                    "id": 15,
+                                    "f_name": "Q_joueur",
+                                    "name": "Q_joueur",
+                                    "gender": "M",
+                                    "birthdate": "01/01/1994",
+                                    "age": "27",
+                                    "ranking": 16,
+                                    "score": 2
+                                },
+                                0
+                            ]
+                        ],
+                        [
+                            [
+                                {
+                                    "id": 9,
+                                    "f_name": "J_joueur",
+                                    "name": "J_joueur",
+                                    "gender": "F",
+                                    "birthdate": "01/01/1994",
+                                    "age": 27,
+                                    "ranking": 9,
+                                    "score": 2
+                                },
+                                0
+                            ],
+                            [
+                                {
+                                    "id": 7,
+                                    "f_name": "G_joueur",
+                                    "name": "G_joueur",
+                                    "gender": "M",
+                                    "birthdate": "01/01/1994",
+                                    "age": 27,
+                                    "ranking": 7,
+                                    "score": 3
+                                },
+                                1
+                            ]
+                        ],
+                        [
+                            [
+                                {
+                                    "id": 16,
+                                    "f_name": "R_joueur",
+                                    "name": "R_joueur",
+                                    "gender": "M",
+                                    "birthdate": "01/01/1994",
+                                    "age": "27",
+                                    "ranking": 17,
+                                    "score": 2
+                                },
+                                1
+                            ],
+                            [
+                                {
+                                    "id": 11,
+                                    "f_name": "Z_joueur",
+                                    "name": "Z_joueur",
+                                    "gender": "M",
+                                    "birthdate": "01/01/1998",
+                                    "age": "23",
+                                    "ranking": 11,
+                                    "score": 1
+                                },
+                                0
+                            ]
+                        ],
+                        [
+                            [
+                                {
+                                    "id": 10,
+                                    "f_name": "I_joueur",
+                                    "name": "I_joueur",
+                                    "gender": "M",
+                                    "birthdate": "01/01/1994",
+                                    "age": 27,
+                                    "ranking": 10,
+                                    "score": 1
+                                },
+                                0
+                            ],
+                            [
+                                {
+                                    "id": 8,
+                                    "f_name": "H_joueur",
+                                    "name": "H_joueur",
+                                    "gender": "F",
+                                    "birthdate": "01/01/1994",
+                                    "age": 27,
+                                    "ranking": 8,
+                                    "score": 1
+                                },
+                                1
+                            ]
+                        ]
+                    ]
+                },
+                {
+                    "name": "Round 3",
+                    "start_time": "24-11-21 13:51:34",
+                    "end_time": "24-11-21 13:52:19",
+                    "matches": [
+                        [
+                            [
+                                {
+                                    "id": 17,
+                                    "f_name": "S_joueur",
+                                    "name": "S_joueur",
+                                    "gender": "M",
+                                    "birthdate": "01/01/1994",
+                                    "age": "27",
+                                    "ranking": 22,
+                                    "score": 4
+                                },
+                                1
+                            ],
+                            [
+                                {
+                                    "id": 7,
+                                    "f_name": "G_joueur",
+                                    "name": "G_joueur",
+                                    "gender": "M",
+                                    "birthdate": "01/01/1994",
+                                    "age": 27,
+                                    "ranking": 7,
+                                    "score": 3
+                                },
+                                0
+                            ]
+                        ],
+                        [
+                            [
+                                {
+                                    "id": 16,
+                                    "f_name": "R_joueur",
+                                    "name": "R_joueur",
+                                    "gender": "M",
+                                    "birthdate": "01/01/1994",
+                                    "age": "27",
+                                    "ranking": 17,
+                                    "score": 2
+                                },
+                                0
+                            ],
+                            [
+                                {
+                                    "id": 15,
+                                    "f_name": "Q_joueur",
+                                    "name": "Q_joueur",
+                                    "gender": "M",
+                                    "birthdate": "01/01/1994",
+                                    "age": "27",
+                                    "ranking": 16,
+                                    "score": 2
+                                },
+                                1
+                            ]
+                        ],
+                        [
+                            [
+                                {
+                                    "id": 9,
+                                    "f_name": "J_joueur",
+                                    "name": "J_joueur",
+                                    "gender": "F",
+                                    "birthdate": "01/01/1994",
+                                    "age": 27,
+                                    "ranking": 9,
+                                    "score": 2
+                                },
+                                1
+                            ],
+                            [
+                                {
+                                    "id": 8,
+                                    "f_name": "H_joueur",
+                                    "name": "H_joueur",
+                                    "gender": "F",
+                                    "birthdate": "01/01/1994",
+                                    "age": 27,
+                                    "ranking": 8,
+                                    "score": 1
+                                },
+                                0
+                            ]
+                        ],
+                        [
+                            [
+                                {
+                                    "id": 11,
+                                    "f_name": "Z_joueur",
+                                    "name": "Z_joueur",
+                                    "gender": "M",
+                                    "birthdate": "01/01/1998",
+                                    "age": "23",
+                                    "ranking": 11,
+                                    "score": 1
+                                },
+                                0
+                            ],
+                            [
+                                {
+                                    "id": 10,
+                                    "f_name": "I_joueur",
+                                    "name": "I_joueur",
+                                    "gender": "M",
+                                    "birthdate": "01/01/1994",
+                                    "age": 27,
+                                    "ranking": 10,
+                                    "score": 1
+                                },
+                                1
+                            ]
+                        ]
+                    ]
+                },
+                {
+                    "name": "Round 4",
+                    "start_time": "24-11-21 13:52:28",
+                    "end_time": "24-11-21 13:52:38",
+                    "matches": [
+                        [
+                            [
+                                {
+                                    "id": 17,
+                                    "f_name": "S_joueur",
+                                    "name": "S_joueur",
+                                    "gender": "M",
+                                    "birthdate": "01/01/1994",
+                                    "age": "27",
+                                    "ranking": 22,
+                                    "score": 4
+                                },
+                                1
+                            ],
+                            [
+                                {
+                                    "id": 9,
+                                    "f_name": "J_joueur",
+                                    "name": "J_joueur",
+                                    "gender": "F",
+                                    "birthdate": "01/01/1994",
+                                    "age": 27,
+                                    "ranking": 9,
+                                    "score": 2
+                                },
+                                0
+                            ]
+                        ],
+                        [
+                            [
+                                {
+                                    "id": 15,
+                                    "f_name": "Q_joueur",
+                                    "name": "Q_joueur",
+                                    "gender": "M",
+                                    "birthdate": "01/01/1994",
+                                    "age": "27",
+                                    "ranking": 16,
+                                    "score": 2
+                                },
+                                0
+                            ],
+                            [
+                                {
+                                    "id": 7,
+                                    "f_name": "G_joueur",
+                                    "name": "G_joueur",
+                                    "gender": "M",
+                                    "birthdate": "01/01/1994",
+                                    "age": 27,
+                                    "ranking": 7,
+                                    "score": 3
+                                },
+                                1
+                            ]
+                        ],
+                        [
+                            [
+                                {
+                                    "id": 16,
+                                    "f_name": "R_joueur",
+                                    "name": "R_joueur",
+                                    "gender": "M",
+                                    "birthdate": "01/01/1994",
+                                    "age": "27",
+                                    "ranking": 17,
+                                    "score": 2
+                                },
+                                1
+                            ],
+                            [
+                                {
+                                    "id": 10,
+                                    "f_name": "I_joueur",
+                                    "name": "I_joueur",
+                                    "gender": "M",
+                                    "birthdate": "01/01/1994",
+                                    "age": 27,
+                                    "ranking": 10,
+                                    "score": 1
+                                },
+                                0
+                            ]
+                        ],
+                        [
+                            [
+                                {
+                                    "id": 8,
+                                    "f_name": "H_joueur",
+                                    "name": "H_joueur",
+                                    "gender": "F",
+                                    "birthdate": "01/01/1994",
+                                    "age": 27,
+                                    "ranking": 8,
+                                    "score": 1
+                                },
+                                0
+                            ],
+                            [
+                                {
+                                    "id": 11,
+                                    "f_name": "Z_joueur",
+                                    "name": "Z_joueur",
+                                    "gender": "M",
+                                    "birthdate": "01/01/1998",
+                                    "age": "23",
+                                    "ranking": 11,
+                                    "score": 1
+                                },
+                                1
+                            ]
+                        ]
+                    ]
+                }
+            ],
+            "current_round": 4,
+            "players": [
+                {
+                    "id": 17,
+                    "f_name": "S_joueur",
+                    "name": "S_joueur",
+                    "gender": "M",
+                    "birthdate": "01/01/1994",
+                    "age": "27",
+                    "ranking": 22,
+                    "score": 4
+                },
+                {
+                    "id": 16,
+                    "f_name": "R_joueur",
+                    "name": "R_joueur",
+                    "gender": "M",
+                    "birthdate": "01/01/1994",
+                    "age": "27",
+                    "ranking": 17,
+                    "score": 2
+                },
+                {
+                    "id": 11,
+                    "f_name": "Z_joueur",
+                    "name": "Z_joueur",
+                    "gender": "M",
+                    "birthdate": "01/01/1998",
+                    "age": "23",
+                    "ranking": 11,
+                    "score": 1
+                },
+                {
+                    "id": 10,
+                    "f_name": "I_joueur",
+                    "name": "I_joueur",
+                    "gender": "M",
+                    "birthdate": "01/01/1994",
+                    "age": 27,
+                    "ranking": 10,
+                    "score": 1
+                },
+                {
+                    "id": 9,
+                    "f_name": "J_joueur",
+                    "name": "J_joueur",
+                    "gender": "F",
+                    "birthdate": "01/01/1994",
+                    "age": 27,
+                    "ranking": 9,
+                    "score": 2
+                },
+                {
+                    "id": 8,
+                    "f_name": "H_joueur",
+                    "name": "H_joueur",
+                    "gender": "F",
+                    "birthdate": "01/01/1994",
+                    "age": 27,
+                    "ranking": 8,
+                    "score": 1
+                },
+                {
+                    "id": 15,
+                    "f_name": "Q_joueur",
+                    "name": "Q_joueur",
+                    "gender": "M",
+                    "birthdate": "01/01/1994",
+                    "age": "27",
+                    "ranking": 16,
+                    "score": 2
+                },
+                {
+                    "id": 7,
+                    "f_name": "G_joueur",
+                    "name": "G_joueur",
+                    "gender": "M",
+                    "birthdate": "01/01/1994",
+                    "age": 27,
+                    "ranking": 7,
+                    "score": 3
+                }
+            ]
+        }
+    }
+}

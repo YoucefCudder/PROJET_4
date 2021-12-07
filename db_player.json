@@ -1,1 +1,184 @@
-{"players": {"1": {"name": "Aouali", "f_name": "Youcef", "birthdate": "30-06-1994", "gender": "M", "age": "27", "score": "0", "ranking": "1"}, "2": {"name": "Chagne", "f_name": "Laura", "birthdate": "19-04-1995", "gender": "F", "age": "26", "score": "0", "ranking": "2"}, "3": {"name": "Machin", "f_name": "Hubert", "birthdate": "01-01-2001", "gender": "M", "age": "20", "score": "0", "ranking": "3"}, "4": {"name": "Adesanya", "f_name": "Israel", "birthdate": "01-01-1989", "gender": "M", "age": "32", "score": "0", "ranking": "4"}, "5": {"name": "Nunes", "f_name": "Amanda", "birthdate": "01-01-1988", "gender": "F", "age": "33", "score": "0", "ranking": "5"}, "6": {"name": "Ngannou", "f_name": "Francis", "birthdate": "01-01-1986", "gender": "m", "age": "35", "score": "0", "ranking": "6"}, "7": {"name": "Moreno", "f_name": "Brandon", "birthdate": "01-01-1993", "gender": "M", "age": "28", "score": "0", "ranking": "7"}, "8": {"name": "Usman", "f_name": "Kamaru", "birthdate": "01-01-1987", "gender": "M", "age": "34", "score": "0", "ranking": "8"}, "9": {"name": "VanVeber", "f_name": "Karl", "birthdate": "01-01-1981", "gender": "M", "age": "40", "score": "0", "ranking": "10"}, "10": {"name": "Chapo", "f_name": "Chapi", "birthdate": "01-01-2020", "gender": "F", "age": "1", "score": "0", "ranking": "11"}, "11": {"name": "Truc", "f_name": "Monsieur", "birthdate": "05-05-1995", "gender": "M", "age": "26", "score": "0", "ranking": "15"}}}
+{
+    "Player": {
+        "1": {
+            "id": 1,
+            "f_name": "A_joueur",
+            "name": "A_joueur",
+            "gender": "M",
+            "birthdate": "01/01/1994",
+            "age": 27,
+            "ranking": 1,
+            "score": 0
+        },
+        "2": {
+            "id": 2,
+            "f_name": "B_joueur",
+            "name": "B_joueur",
+            "gender": "F",
+            "birthdate": "01/01/1994",
+            "age": 27,
+            "ranking": 2,
+            "score": 0
+        },
+        "3": {
+            "id": 3,
+            "f_name": "C_joueur",
+            "name": "C_joueur",
+            "gender": "M",
+            "birthdate": "01/01/1994",
+            "age": 27,
+            "ranking": 3,
+            "score": 0
+        },
+        "4": {
+            "id": 4,
+            "f_name": "D_joueur",
+            "name": "D_joueur",
+            "gender": "F",
+            "birthdate": "01/01/1994",
+            "age": 27,
+            "ranking": 4,
+            "score": 0
+        },
+        "5": {
+            "id": 5,
+            "f_name": "E_joueur",
+            "name": "E_joueur",
+            "gender": "M",
+            "birthdate": "01/01/1994",
+            "age": 27,
+            "ranking": 5,
+            "score": 0
+        },
+        "6": {
+            "id": 6,
+            "f_name": "F_joueur",
+            "name": "F_joueur",
+            "gender": "F",
+            "birthdate": "01/01/1994",
+            "age": 27,
+            "ranking": "23",
+            "score": 0
+        },
+        "7": {
+            "id": 7,
+            "f_name": "G_joueur",
+            "name": "G_joueur",
+            "gender": "M",
+            "birthdate": "01/01/1994",
+            "age": 27,
+            "ranking": 7,
+            "score": 0
+        },
+        "8": {
+            "id": 8,
+            "f_name": "H_joueur",
+            "name": "H_joueur",
+            "gender": "F",
+            "birthdate": "01/01/1994",
+            "age": 27,
+            "ranking": 8,
+            "score": 0
+        },
+        "9": {
+            "id": 9,
+            "f_name": "J_joueur",
+            "name": "J_joueur",
+            "gender": "F",
+            "birthdate": "01/01/1994",
+            "age": 27,
+            "ranking": 9,
+            "score": 0
+        },
+        "10": {
+            "id": 10,
+            "f_name": "I_joueur",
+            "name": "I_joueur",
+            "gender": "M",
+            "birthdate": "01/01/1994",
+            "age": 27,
+            "ranking": 10,
+            "score": 0
+        },
+        "11": {
+            "id": 11,
+            "f_name": "Z_joueur",
+            "name": "Z_joueur",
+            "gender": "M",
+            "birthdate": "01/01/1998",
+            "age": "23",
+            "ranking": 11,
+            "score": 0
+        },
+        "12": {
+            "id": 12,
+            "f_name": "K_joueur",
+            "name": "K_joueur",
+            "gender": "F",
+            "birthdate": "01/01/1994",
+            "age": "27",
+            "ranking": 14,
+            "score": 0
+        },
+        "13": {
+            "id": 13,
+            "f_name": "N_joueur",
+            "name": "N_joueur",
+            "gender": "F",
+            "birthdate": "01/01/2000",
+            "age": "21",
+            "ranking": 19,
+            "score": 0
+        },
+        "14": {
+            "id": 14,
+            "f_name": "P_joueur",
+            "name": "P_joueur",
+            "gender": "M",
+            "birthdate": "01/01/1994",
+            "age": "27",
+            "ranking": 15,
+            "score": 0
+        },
+        "15": {
+            "id": 15,
+            "f_name": "Q_joueur",
+            "name": "Q_joueur",
+            "gender": "M",
+            "birthdate": "01/01/1994",
+            "age": "27",
+            "ranking": 16,
+            "score": 0
+        },
+        "16": {
+            "id": 16,
+            "f_name": "R_joueur",
+            "name": "R_joueur",
+            "gender": "M",
+            "birthdate": "01/01/1994",
+            "age": "27",
+            "ranking": 17,
+            "score": 0
+        },
+        "17": {
+            "id": 17,
+            "f_name": "S_joueur",
+            "name": "S_joueur",
+            "gender": "M",
+            "birthdate": "01/01/1994",
+            "age": "27",
+            "ranking": 22,
+            "score": 0
+        },
+        "18": {
+            "id": 18,
+            "f_name": "U_joueur",
+            "name": "U_joueur",
+            "gender": "M",
+            "birthdate": "01/01/1994",
+            "age": "27",
+            "ranking": 18,
+            "score": 0
+        }
+    }
+}
