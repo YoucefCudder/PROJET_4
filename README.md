@@ -6,7 +6,7 @@ Projet 4, logiciel de gestion de tournois d'échecs
 
 Pour installer le projet 
 ```bash
-  git clone https://github.com/YoucefCudder/PROJET_4.git
+git clone https://github.com/YoucefCudder/PROJET_4.git
 ```
 
 
