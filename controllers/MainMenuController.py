@@ -12,11 +12,17 @@ from controllers.ReportMenuController import ReportMenuController
 
 
 class MainMenuController:
+    """class useful to handle every main controllers of the software thanks to a menu"""
+
     def __init__(self):
         self.menu = Menu()
         self.vue = MenuView(self.menu, "Accueil du gestionnaire de Tournoi")
 
     def __call__(self):
+        """
+        method to call the options of the main menu controller
+        :return: the option called thanks to an input to make the choice
+        """
         self.menu.add("auto", "Ajouter un joueur\n", AddPlayerController())
         self.menu.add("auto", "Créer un tournoi\n", AddTournamentController())
         self.menu.add("auto", "Charger un tournoi\n", LoadTournamentController())
@@ -34,7 +40,13 @@ class MainMenuController:
 
 
 class AddPlayerController:
+    """class needed to handle the possibility to create a new player."""
+
     def __call__(self):
+        """
+        method to add a player via many inputs information into the database.
+        :return: once it's done, the method returns the main menu controller.
+        """
         player_data = PlayerView().create_player_input()
         player = Player(
             player_data["f_name"],
@@ -49,7 +61,13 @@ class AddPlayerController:
 
 
 class AddTournamentController:
+    """class needed to handle the possibility to create a new tournament."""
+
     def __call__(self):
+        """
+        method to add a tournament via  many inputs information into the database.
+        :return: once it's done, the method returns the tournament controller to manage the tournament.
+        """
         tournament_data = TournamentView().create_tournament_input()
         tournament = Tournament(
             tournament_data["name"],
@@ -65,7 +83,14 @@ class AddTournamentController:
 
 
 class LoadTournamentController:
+    """class needed to handle the possibility to load any tournament already saved in the database."""
+
     def __call__(self):
+        """
+        method to a load a preexisting tournament saved in the database in order to manage it.
+        :return: once it's done, the method returns the tournament controller
+        to select specifically the tournament.
+        """
         tournaments = Tournament().retrieve_all()
         if len(tournaments) <= 0:
             ErrorHandlerView().display_error("aucun tournoi à charger")
@@ -74,20 +99,37 @@ class LoadTournamentController:
 
 
 class LoadReportsController:
+    """class useful to call the report controllers in the main menu"""
+
     def __call__(self):
+        """
+        method to call the controller of the reports available.
+        :return: it returns the report controller.
+        """
         return ReportMenuController()
 
 
 class ModifyPlayerController:
+    """class needed to handle the possibility to modify the ranking information of a player already saved."""
+
     def __call__(self):
+        """
+        method to modify the ranking of a player.
+        :return: once it's done, it returns the main menu controller
+        """
         players = Player().retrieve_all()
         selected_player = PlayerView().select_player(players)
-        new_ranking = InputCheckView().input_int("Nouveau classement : ")  # vue
+        new_ranking = InputCheckView().check_int("Nouveau classement : ")
         selected_player.ranking = new_ranking
         selected_player.update()
         return MainMenuController()
 
 
 class CloseController:
+    """class needed to handle the possibility to close the software"""
+
     def __call__(self):
+        """
+        method called when the user wants to close the program.
+        """
         MenuView().close()

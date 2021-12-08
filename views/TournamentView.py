@@ -1,15 +1,17 @@
 #!/usr/bin/python3
 # coding: utf8
 from views.ToolViews import InputCheckView, ErrorHandlerView
-from pprint import pprint
 
 
 class TournamentView:
+    """class that handle what the user can see about everything related to the tournament."""
+
     def __init__(self):
         self.checker = InputCheckView()
         self.error_handler = ErrorHandlerView()
 
     def create_tournament_input(self):
+        """method useful to propose inputs in order to create a tournament according to the user"""
         print("Ajouter un nouveau tournoi: ")
         print()
         print("Placez une majuscule lors de vos saisies")
@@ -31,6 +33,7 @@ class TournamentView:
         }
 
     def select_players(self, players):
+        """method to select players who participate in the tournament."""
         selected_players = []
 
         while True:
@@ -48,6 +51,7 @@ class TournamentView:
         return selected_players
 
     def select_tournament(self, tournaments):
+        """method useful when it comes to select a tournament."""
         for key, tournament in enumerate(tournaments):
             print(f"{key}: {tournament}")
         user_input = self.checker.input_in_array_of_int(
@@ -55,29 +59,31 @@ class TournamentView:
         )
         return tournaments[user_input]
 
-    @staticmethod
-    def display_match(match):
-        # for m in [match if match != 0 else f"error"]:
+    @classmethod
+    def display_match(cls, match):
+        """method useful to display the format of a match."""
         print(f"1.{match[0][0]} vs 2.{match[1][0]}\n")
 
     def result_of_match(self, match):
+        """method useful when it comes to determine the score of a match."""
         self.display_match(match)
         return self.checker.result_option()
 
     @classmethod
     def show_tournaments(cls, tournaments):
+        """method to show properly a tournament."""
         for t in tournaments:
             print(f"\n{t.name}  {t.place}  {t.description}  {t.start} \n")
 
     @classmethod
     def show_rounds_tournament(cls, tournament):
-
+        """method to show rounds of a tournament."""
         for r in tournament.rounds_list:
             print(r)
 
     @classmethod
     def show_matches_tournament(cls, tournament):
-
+        """method to show the matches of a tournament."""
         for r in tournament.rounds_list:
             print(r)
             for m in r.matches:
@@ -85,12 +91,14 @@ class TournamentView:
 
     @classmethod
     def show_players_by_name(cls, players):
+        """method to show players sorted by name."""
         players.sort(key=lambda x: x.name)
         for p in players:
             print(p)
 
     @classmethod
     def show_players_by_ranking(cls, players):
+        """method to show players sorted by ranking."""
         players.sort(key=lambda x: x.ranking, reverse=True)
         for p in players:
             print(p)

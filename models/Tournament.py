@@ -6,6 +6,8 @@ from models.Round import Round
 
 
 class Tournament:
+    """class needed to conceptualize the model of a tournament in the software and its place in the database."""
+
     def __init__(
         self, name=None, description=None, place=None, start=None, end=None, timing=None
     ):
@@ -29,23 +31,28 @@ class Tournament:
         return f"{self.name} - {self.place} ({self.start} - {self.end})"
 
     def insert(self):
+        """method useful to serialize, which means that stores the tournament in the database with an id"""
         self.id = self.table.insert(self.serialize())
         self.update()
 
     def update(self):
+        """method useful to update the tournament in the database with new information"""
         self.table.update(self.serialize(), doc_ids=[self.id])
 
     def retrieve(self, idx):
+        """method useful to retrieve a tournament from the database thanks to the id"""
         tournament = self.table.get(doc_id=idx)
         self.deserialize(tournament)
 
     def retrieve_all(self):
+        """method useful to retrieve all the tournaments from the database"""
         tournaments = []
         for t in self.table.all():
             tournaments.append(Tournament().deserialize(t))
         return tournaments
 
     def serialize(self):
+        """method that shows what to serialize about the tournament"""
         return {
             "id": self.id,
             "name": self.name,
@@ -61,6 +68,7 @@ class Tournament:
         }
 
     def deserialize(self, t):
+        """method method to deserialize a tournament and using it as an instance."""
         self.id = t["id"]
         self.name = t["name"]
         self.description = t["description"]

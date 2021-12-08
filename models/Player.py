@@ -4,6 +4,8 @@ from tinydb import TinyDB
 
 
 class Player:
+    """class needed to conceptualize the model of a player in the software and its place in the database."""
+
     def __init__(
         self,
         f_name=None,
@@ -30,23 +32,28 @@ class Player:
         return f"{self.name} {self.f_name}, Classement: {self.ranking}"
 
     def insert(self):
+        """method to insert  the player in the database with and id."""
         self.id = self.table.insert(self.serialize())
         self.update()
 
     def update(self):
+        """method to update the player in the database."""
         self.table.update(self.serialize(), doc_ids=[self.id])
 
     def retrieve(self, idx):
+        """method to retrieve the player thanks to the id."""
         player = self.table.get(doc_id=idx)
         self.deserialize(player)
 
     def retrieve_all(self):
+        """method to retrieve all players stored in the database, and deserialize them."""
         players = []
         for p in self.table.all():
             players.append(Player().deserialize(p))
         return players
 
     def serialize(self):
+        """method useful to serialize a player in the database."""
         return {
             "id": self.id,
             "f_name": self.f_name,
@@ -59,6 +66,7 @@ class Player:
         }
 
     def deserialize(self, p):
+        """method to deserialize a player and using it as an instance."""
         self.id = p["id"]
         self.f_name = p["f_name"]
         self.name = p["name"]

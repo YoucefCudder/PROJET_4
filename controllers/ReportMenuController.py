@@ -10,6 +10,8 @@ from views.ToolViews import InputCheckView, ReportView
 
 
 class ReportMenuController:
+    """class that handle the different reports controller with a menu."""
+
     def __init__(self):
         self.menu = Menu()
         self.vue = MenuView(
@@ -17,6 +19,10 @@ class ReportMenuController:
         )
 
     def __call__(self):
+        """
+        method to call a menu that manage the report controller options.
+        :return: the option called thanks to an input to make the choice.
+        """
         self.menu.add("auto", "Affichage de tous les joueurs", GeneralPlayerReport())
         self.menu.add("auto", "Affichage des joueurs par tournoi", PlayersTournament())
         self.menu.add("auto", "Affichage des tournois", TournamentReport())
@@ -32,10 +38,16 @@ class ReportMenuController:
 
 
 class GeneralPlayerReport:
+    """class that displays different rankings for all the players registered in the software."""
+
     def __call__(self):
+        """
+        method to manage the general reports of the players registered in the database.
+        :return: once it's done, it returns the report menu controller.
+        """
         players_data = Player().retrieve_all()
         ReportView().show_options()
-        user_choice = InputCheckView().input_int("Veuillez choisir une option : \n")
+        user_choice = InputCheckView().check_int("Veuillez choisir une option : \n")
         if user_choice == 1:
             TournamentView.show_players_by_name(players_data)
             return ReportMenuController()
@@ -48,13 +60,18 @@ class GeneralPlayerReport:
 
 
 class PlayersTournament:
+    """class that displays reports of players in a specific tournament."""
+
     def __call__(self):
+        """
+        method to call the reports about the players in a specific tournament choosen via an user input
+        :return: once it's done,  it returns the report menu controller.
+        """
         tournament_data = Tournament().retrieve_all()
         select_tournament = TournamentView().select_tournament(tournament_data)
-
         players_data = select_tournament.players
         ReportView().show_options()
-        user_choice = InputCheckView().input_int("Veuillez choisir une option : \n")
+        user_choice = InputCheckView().check_int("Veuillez choisir une option : \n")
         if user_choice == 1:
             TournamentView.show_players_by_name(players_data)
             return ReportMenuController()
@@ -65,11 +82,18 @@ class PlayersTournament:
 
 
 class TournamentReport:
+    """class to display the reports of a specific tournament"""
+
     def __call__(self):
+        """
+        method to call the reports about rounds and matches of a specific tournament
+        choosen via an user input.
+        :return: once it's done,  it returns the report menu controller.
+        """
         tournament_data = Tournament().retrieve_all()
         select_tournament = TournamentView().select_tournament(tournament_data)
         ReportView().show_options_for_tournament()
-        user_choice = InputCheckView().input_int("Veuillez choisir une option : \n")
+        user_choice = InputCheckView().check_int("Veuillez choisir une option : \n")
         if user_choice == 1:
             TournamentView().show_tournaments(tournament_data)
         elif user_choice == 2:

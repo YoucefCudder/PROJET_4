@@ -9,12 +9,19 @@ from views.ToolViews import ErrorHandlerView, ReportView, InputCheckView
 
 
 class TournamentMenuController:
+    """class that organize the ruling of a tournament with a menu in order
+    to choose to start or end a round."""
+
     def __init__(self, tournament):
         self.menu = Menu()
         self.vue = MenuView(self.menu, "")
         self.tournament = tournament
 
     def __call__(self):
+        """
+        method to call the options of the tournament menu controller
+        :return: the option called thanks to an input to make the choice
+        """
         self.menu.add("auto", "Lancer un round", StartRoundController(self.tournament))
         self.menu.add("auto", "Terminer un round", EndRoundController(self.tournament))
         self.menu.add(
@@ -33,10 +40,16 @@ class TournamentMenuController:
 
 
 class StartRoundController:
+    """class useful to start a round of a tournament, with all the verifications required"""
+
     def __init__(self, tournament):
         self.tournament = tournament
 
     def __call__(self):
+        """
+        method to start a round and to check the state of the rounds of a tournament in order to avoid errors.
+        :return: once it's done, it returns the tournament menu controller to continue.
+        """
         if (
             self.tournament.current_round >= self.tournament.rounds
             and self.tournament.rounds_list[self.tournament.current_round - 1].end_time
@@ -68,10 +81,17 @@ class StartRoundController:
 
 
 class EndRoundController:
+    """class that organize the end of the current which involve the score of each player"""
+
     def __init__(self, tournament):
         self.tournament = tournament
 
     def __call__(self):
+        """
+        method useful to end the current round started,  and offer to the user
+        the possibility to enter the result of the matches via input.
+        :return: once it's done, it returns the tournament menu controller.
+        """
         if (
             self.tournament.current_round >= self.tournament.rounds
             and self.tournament.rounds_list[self.tournament.current_round - 1].end_time
@@ -119,10 +139,18 @@ class EndRoundController:
 
 
 class ShowMatchController:
+    """
+    class that display the report menu into the tournament menu controller.
+    """
+
     def __init__(self, tournament):
         self.tournament = tournament
 
     def __call__(self):
+        """
+        method called to display the reports of the rounds with their matches, already ended.
+        :return:
+        """
         TournamentView().show_matches_tournament(self.tournament)
         return TournamentMenuController(self.tournament)
 
@@ -133,7 +161,7 @@ class ShowTournamentContentController:
 
     def __call__(self):
         ReportView().show_options_for_tournament()
-        user_choice = InputCheckView().input_int("Veuillez choisir une option : \n")
+        user_choice = InputCheckView().check_int("Veuillez choisir une option : \n")
         if user_choice == 1:
             TournamentView().show_matches_tournament(self.tournament)
         elif user_choice == 2:

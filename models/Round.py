@@ -5,6 +5,8 @@ from models.Player import Player
 
 
 class Round:
+    """class useful to modeling the format of the different rounds of a tournament"""
+
     def __init__(self, name=None):
         self.name = name
         self.start_time = datetime.now().strftime("%d-%m-%y %H:%M:%S")
@@ -18,6 +20,7 @@ class Round:
         return f"{self.name} ({self.start_time} - {self.end_time})"
 
     def serialize(self):
+        """method that serializes the rounds informations into the database."""
         return {
             "name": self.name,
             "start_time": self.start_time,
@@ -29,6 +32,7 @@ class Round:
         }
 
     def deserialize(self, r):
+        """method to deserialize a round and using it as an instance."""
         self.name = r["name"]
         self.start_time = r["start_time"]
         self.end_time = r["end_time"]
@@ -42,6 +46,7 @@ class Round:
         return self
 
     def first_pairing(self, players):
+        """method useful to organize the first round of a tournament, pairing the players by their ranking"""
         sorted_list = sorted(players, key=lambda p: int(p.ranking), reverse=True)
         print(sorted_list)
         self.matches = [
@@ -52,6 +57,7 @@ class Round:
         ]
 
     def other_pairing(self, players, rounds):
+        """method useful to organize the others rounds in order to generate matches never played before."""
         sorted_list = sorted(
             players, key=lambda p: (float(p.score), int(p.ranking)), reverse=True
         )
@@ -82,4 +88,5 @@ class Round:
             ]
 
     def end_round(self):
+        """method useful to end the round by adding the end time."""
         self.end_time = datetime.now().strftime("%d-%m-%y %H:%M:%S")
